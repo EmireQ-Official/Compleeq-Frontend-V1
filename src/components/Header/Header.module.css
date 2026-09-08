@@ -1,0 +1,382 @@
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.header {
+  position: relative;
+  width: 100%;
+  background: #fdfcfa;
+  border-radius: 0 0 16px 16px;
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.04),
+    0 4px 16px rgba(16, 24, 40, 0.04);
+  z-index: 50;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 81px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 24px;
+  padding: 0 119px 0 118px;
+}
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-size: 22px;
+  font-weight: 700;
+  color: #182230;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   DESKTOP NAVIGATION
+   ========================================================== */
+
+.desktopNav {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2430;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 8px 2px;
+  transition: color 180ms ease;
+}
+
+.navLink:hover {
+  color: #1f4a43;
+}
+
+.navLink:focus-visible {
+  outline: 2px solid #1f4a43;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ==========================================================
+   RIGHT ACTIONS
+   ========================================================== */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-self: end;
+  flex-shrink: 0;
+}
+
+.signIn {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2430;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 10px 4px;
+  transition: color 180ms ease;
+}
+
+.signIn:hover {
+  color: #1f4a43;
+}
+
+.signIn:focus-visible {
+  outline: 2px solid #1f4a43;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 159px;
+  height: 46px;
+  background: #1f4a43;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition:
+    background 180ms ease,
+    transform 150ms ease;
+}
+
+.cta:hover {
+  background: #285951;
+}
+
+.cta:active {
+  transform: translateY(1px);
+}
+
+.cta:focus-visible {
+  outline: 2px solid #0f2e29;
+  outline-offset: 3px;
+}
+
+.ctaArrow {
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.cta:hover .ctaArrow {
+  transform: translateX(2px);
+}
+
+/* ==========================================================
+   HAMBURGER (hidden on desktop)
+   ========================================================== */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  justify-self: end;
+}
+
+.hamburger:focus-visible {
+  outline: 2px solid #1f4a43;
+  outline-offset: 2px;
+}
+
+.hamburgerLine {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #182230;
+  border-radius: 2px;
+  transition:
+    transform 200ms ease,
+    opacity 200ms ease;
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ==========================================================
+   MOBILE MENU (drawer)
+   ========================================================== */
+
+.mobileMenu {
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  background: #fdfcfa;
+  border-top: 1px solid rgba(16, 24, 40, 0.06);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
+  transition: max-height 220ms ease;
+}
+
+.mobileMenuOpen {
+  max-height: 480px;
+}
+
+.mobileNavList {
+  list-style: none;
+  margin: 0;
+  padding: 16px 24px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileNavLink {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1f2430;
+  text-decoration: none;
+  padding: 14px 4px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.06);
+  transition: color 180ms ease;
+}
+
+.mobileNavList li:last-child .mobileNavLink {
+  border-bottom: none;
+}
+
+.mobileNavLink:hover {
+  color: #1f4a43;
+}
+
+.mobileNavLink:focus-visible {
+  outline: 2px solid #1f4a43;
+  outline-offset: -2px;
+  border-radius: 4px;
+}
+
+.mobileActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 24px 24px;
+}
+
+.mobileSignIn {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1f2430;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(16, 24, 40, 0.12);
+  transition: background 180ms ease;
+}
+
+.mobileSignIn:hover {
+  background: rgba(16, 24, 40, 0.04);
+}
+
+.mobileCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  background: #1f4a43;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 180ms ease;
+}
+
+.mobileCta:hover {
+  background: #285951;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1280px) {
+  .container {
+    padding: 0 64px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 32px;
+    column-gap: 16px;
+  }
+
+  .navList {
+    gap: 20px;
+  }
+
+  .actions {
+    gap: 16px;
+  }
+
+  .logoText {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 72px;
+  }
+
+  .desktopNav,
+  .actions {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .logoText {
+    font-size: 18px;
+  }
+
+  .logoIcon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta,
+  .ctaArrow,
+  .navLink,
+  .signIn,
+  .hamburgerLine,
+  .mobileMenu {
+    transition: none;
+  }
+}

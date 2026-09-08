@@ -1,0 +1,457 @@
+/* ==========================================================
+   SECTION
+   ========================================================== */
+
+.section {
+  width: 100%;
+  background: #f8f7f1;
+  padding: 112px 0px;
+}
+
+/* ==========================================================
+   HEADER (eyebrow + heading + description)
+   ========================================================== */
+
+.header {
+  max-width: 760px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.eyebrowLine {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: #5e8871;
+  flex-shrink: 0;
+}
+
+.eyebrowText {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #5e8871;
+  white-space: nowrap;
+}
+
+.heading {
+  margin: 0 0 24px;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #234f47;
+}
+
+.headingLine {
+  display: block;
+}
+
+.description {
+  margin: 0 auto;
+  max-width: 680px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #62625c;
+}
+
+.lineBreak {
+  display: inline;
+}
+
+/* ==========================================================
+   GRID
+   ========================================================== */
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  gap: 32px;
+}
+
+.row:first-child {
+  margin-bottom: 32px;
+}
+
+/* ==========================================================
+   CARD
+   ========================================================== */
+
+.card {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-radius: 24px;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.cardWide {
+  flex: 1.46 1 0;
+}
+
+.cardLight {
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+.cardLight:hover {
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
+}
+
+.cardDark {
+  background: #1c3d36;
+}
+
+.cardDark:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.cardNumber {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cardLight .cardNumber {
+  color: #5e8871;
+}
+
+.cardDark .cardNumber {
+  color: #8fc2a4;
+}
+
+.cardTitle {
+  margin: 0 0 12px;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.cardLight .cardTitle {
+  color: #1f4a43;
+}
+
+.cardDark .cardTitle {
+  color: #ffffff;
+}
+
+.cardDescription {
+  margin: 0 0 24px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.cardLight .cardDescription {
+  color: #5b6472;
+}
+
+.cardDark .cardDescription {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ==========================================================
+   WIDGET (shared container)
+   ========================================================== */
+
+.widget {
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.cardLight .widget {
+  background: #f0f0e8;
+}
+
+.cardDark .widget {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.widgetRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.widgetTitle {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cardLight .widgetTitle {
+  color: #101828;
+}
+
+.cardDark .widgetTitle {
+  color: #ffffff;
+}
+
+.widgetLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(16, 24, 40, 0.2);
+  margin: 0 4px;
+}
+
+.widgetSubtext {
+  margin: 0;
+  font-size: 13px;
+  color: #5b6472;
+}
+
+.widgetLabel {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cardLight .widgetLabel {
+  color: #5b6472;
+}
+
+.cardDark .widgetLabel {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.widgetMeta {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   WIDGET — CARD 01 (business verified)
+   ========================================================== */
+
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #1f4a43;
+  background: #d7e9d3;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.widgetList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.widgetList li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #3f4a45;
+}
+
+.check {
+  color: #3f9e5c;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* ==========================================================
+   WIDGET — CARD 03 (risk)
+   ========================================================== */
+
+.riskLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6fd18f;
+  white-space: nowrap;
+}
+
+.progressBar {
+  display: flex;
+  gap: 6px;
+}
+
+.progressSegment {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.progressFilled {
+  background: #3f9e5c;
+}
+
+/* ==========================================================
+   WIDGET — CARD 04 (obligations)
+   ========================================================== */
+
+.obligationList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.obligationList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dueDate {
+  color: rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   WIDGET — CARD 05 (workflow)
+   ========================================================== */
+
+.livePill {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  background: #3f9e5c;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.workflowText {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #3f4a45;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1280px) {
+  .section {
+    padding: 96px 64px;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 80px 32px;
+  }
+
+  .heading {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .row:first-child {
+    margin-bottom: 24px;
+  }
+
+  .card,
+  .cardWide {
+    flex: 1 1 calc(50% - 12px);
+  }
+
+  .row:first-child .card:last-child {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 64px 20px;
+  }
+
+  .header {
+    margin-bottom: 48px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .lineBreak {
+    display: none;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .row:first-child {
+    margin-bottom: 20px;
+  }
+
+  .card,
+  .cardWide {
+    flex: 1 1 auto;
+  }
+
+  .row:first-child .card:last-child {
+    flex: 1 1 auto;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+  }
+
+  .widgetRow {
+    flex-wrap: wrap;
+  }
+}

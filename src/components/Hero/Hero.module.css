@@ -1,0 +1,272 @@
+/* ==========================================================
+   HERO SECTION
+   ========================================================== */
+
+.hero {
+  width: 100%;
+  background: #fdfcfa;
+  padding: 96px 24px 100px;
+  animation: heroFadeIn 500ms ease both;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ==========================================================
+   EYEBROW
+   ========================================================== */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 44px;
+}
+
+.eyebrowLine {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: #5e8871;
+  flex-shrink: 0;
+}
+
+.eyebrowText {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #5e8871;
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   HEADLINE
+   ========================================================== */
+
+.headline {
+  margin: 0 0 40px;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.headlineLine1,
+.headlineLine2 {
+  display: block;
+}
+
+.headlineLine1 {
+  color: #182230;
+}
+
+.headlineLine2 {
+  color: #3e7a5b;
+}
+
+/* ==========================================================
+   DESCRIPTION
+   ========================================================== */
+
+.description {
+  margin: 0 auto 40px;
+  max-width: 780px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #5b6472;
+}
+
+.lineBreak {
+  display: inline;
+}
+
+/* ==========================================================
+   ACTIONS / BUTTONS
+   ========================================================== */
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 160px;
+  height: 47px;
+  background: #1f4a43;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition:
+    background 180ms ease,
+    transform 150ms ease;
+}
+
+.primaryButton:hover {
+  background: #285951;
+}
+
+.primaryButton:active {
+  transform: translateY(1px);
+}
+
+.primaryButton:focus-visible {
+  outline: 2px solid #0f2e29;
+  outline-offset: 3px;
+}
+
+.arrow {
+  font-size: 15px;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.primaryButton:hover .arrow {
+  transform: translateX(2px);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 188px;
+  height: 47px;
+  background: #fdfcfa;
+  color: #182230;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background 180ms ease;
+}
+
+.secondaryButton:hover {
+  background: rgba(16, 24, 40, 0.04);
+}
+
+.secondaryButton:focus-visible {
+  outline: 2px solid #1f4a43;
+  outline-offset: 2px;
+}
+
+/* ==========================================================
+   INITIAL LOAD ANIMATION (subtle)
+   ========================================================== */
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    animation: none;
+  }
+
+  .primaryButton,
+  .arrow,
+  .secondaryButton {
+    transition: none;
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1280px) {
+  .headline {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 72px 32px 80px;
+  }
+
+  .eyebrow {
+    margin-bottom: 32px;
+  }
+
+  .headline {
+    font-size: 56px;
+    margin-bottom: 32px;
+  }
+
+  .description {
+    max-width: 90%;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 64px 20px 64px;
+  }
+
+  .eyebrow {
+    margin-bottom: 24px;
+  }
+
+  .eyebrowText {
+    font-size: 11px;
+  }
+
+  .headline {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .description {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .lineBreak {
+    display: none;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 380px) {
+  .headline {
+    font-size: 34px;
+  }
+}
