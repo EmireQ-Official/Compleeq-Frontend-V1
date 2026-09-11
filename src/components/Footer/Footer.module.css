@@ -1,0 +1,414 @@
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.footer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #7eb8d4;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px 36px;
+}
+
+/* ==========================================================
+   CTA CARD
+   ========================================================== */
+
+.ctaCard {
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 72px 48px 64px;
+  text-align: center;
+  box-shadow: 0 16px 48px rgba(16, 24, 40, 0.08);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.eyebrowLine {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: #5e8871;
+  flex-shrink: 0;
+}
+
+.eyebrowText {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #5e8871;
+  white-space: nowrap;
+}
+
+.heading {
+  margin: 0 0 20px;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #234f47;
+}
+
+.headingLine {
+  display: block;
+}
+
+.description {
+  margin: 0 auto 36px;
+  max-width: 620px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #62625c;
+}
+
+.lineBreak {
+  display: inline;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 46px;
+  padding: 0 24px;
+  background: #1f4a43;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition:
+    background 180ms ease,
+    transform 150ms ease;
+}
+
+.primaryButton:hover {
+  background: #285951;
+}
+
+.primaryButton:active {
+  transform: translateY(1px);
+}
+
+.primaryButton:focus-visible {
+  outline: 2px solid #0f2e29;
+  outline-offset: 3px;
+}
+
+.arrow {
+  font-size: 15px;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.primaryButton:hover .arrow {
+  transform: translateX(2px);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 22px;
+  background: #e8efe6;
+  color: #1f4a43;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background 180ms ease;
+}
+
+.secondaryButton:hover {
+  background: #dce7d8;
+}
+
+.secondaryButton:focus-visible {
+  outline: 2px solid #1f4a43;
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   FOOTER NAV
+   ========================================================== */
+
+.footerMain {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.25fr) 3.2fr;
+  gap: 48px;
+  margin-top: 88px;
+  align-items: start;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.brandMark {
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.tagline {
+  margin: 0;
+  max-width: 260px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px 32px;
+}
+
+.columnTitle {
+  margin: 0 0 18px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.columnList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.columnLink {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 180ms ease;
+}
+
+.columnLink:hover {
+  opacity: 0.75;
+}
+
+.columnLink:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ==========================================================
+   BOTTOM BAR
+   ========================================================== */
+
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 48px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.copyright {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.legalList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.legalLink {
+  font-size: 13px;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 180ms ease;
+}
+
+.legalLink:hover {
+  opacity: 0.75;
+}
+
+.legalLink:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton,
+  .arrow,
+  .secondaryButton,
+  .columnLink,
+  .legalLink {
+    transition: none;
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1280px) {
+  .inner {
+    padding: 72px 32px 32px;
+  }
+
+  .heading {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ctaCard {
+    padding: 56px 32px 48px;
+    border-radius: 28px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .footerMain {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 64px;
+  }
+
+  .columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tagline {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    padding: 48px 16px 28px;
+  }
+
+  .ctaCard {
+    padding: 40px 20px 36px;
+    border-radius: 24px;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .lineBreak {
+    display: none;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .footerMain {
+    margin-top: 48px;
+  }
+
+  .columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .legalList {
+    flex-wrap: wrap;
+    gap: 16px 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 22px;
+  }
+}

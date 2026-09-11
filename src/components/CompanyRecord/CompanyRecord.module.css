@@ -1,0 +1,398 @@
+.section {
+  width: 100%;
+  background-color: #f8f7f1;
+  padding: 110px 24px 100px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 76px;
+  align-items: start;
+}
+
+/* ================= LEFT CONTENT ================= */
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.eyebrowLine {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #6f9488;
+  border-radius: 1px;
+}
+
+.eyebrowText {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #6f9488;
+  line-height: 1;
+}
+
+.heading {
+  margin: 0 0 22px 0;
+  padding: 0;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: #285a53;
+  max-width: 500px;
+}
+
+.headingLine {
+  display: block;
+}
+
+.description {
+  margin: 0 0 30px 0;
+  max-width: 470px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5e706d;
+}
+
+.descLine {
+  display: block;
+}
+
+.benefitList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #285a53;
+  max-width: 470px;
+}
+
+.check {
+  flex-shrink: 0;
+  color: #2f8f6f;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.benefitItem strong {
+  font-weight: 700;
+}
+
+/* ================= RIGHT VISUAL ================= */
+
+.visual {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  height: 533px;
+  border-radius: 14px;
+  overflow: hidden;
+  justify-self: end;
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ============= WHITE COMPANY CARD (overlay) ============= */
+
+.companyCard {
+  position: absolute;
+  left: 40px;
+  right: 0;
+  top: 122px;
+  height: 360px;
+  background-color: #ffffff;
+  border-radius: 18px 0px 0px 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+  padding: 24px 26px 22px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cardTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  color: #102027;
+  line-height: 1.2;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 9px;
+  background-color: #e3f3ea;
+  color: #2f8f6f;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  border-radius: 999px;
+  line-height: 1;
+}
+
+.menuDots {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.menuDots span {
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  background-color: #9a9a94;
+  display: inline-block;
+}
+
+.cardMeta {
+  margin: 4px 0 18px 0;
+  font-size: 13px;
+  color: #7a7c76;
+  line-height: 1.4;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #8a8c86;
+  padding-bottom: 10px;
+  position: relative;
+  cursor: default;
+}
+
+.tabActive {
+  color: #17352f;
+  font-weight: 700;
+}
+
+.tabActive::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #2f8f6f;
+  border-radius: 1px;
+}
+
+.tabsDivider {
+  width: 100%;
+  height: 1px;
+  background-color: #edece6;
+  margin-bottom: 20px;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.detailsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detailBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detailLabel {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #9a9c95;
+  text-transform: uppercase;
+}
+
+.detailValue {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #17352f;
+  line-height: 1.4;
+}
+
+.statusLine {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #2f8f6f;
+  line-height: 1.6;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+  .container {
+    grid-template-columns: 440px 1fr;
+    gap: 50px;
+  }
+
+  .heading {
+    font-size: 38px;
+  }
+
+  .visual {
+    max-width: 520px;
+    height: 447px;
+  }
+
+  .companyCard {
+    top: 100px;
+    height: 250px;
+    left: 32px;
+    padding: 20px 22px 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    max-width: 560px;
+  }
+
+  .visual {
+    max-width: 100%;
+    justify-self: stretch;
+    margin-top: 50px;
+    height: auto;
+    aspect-ratio: 620 / 533;
+  }
+
+  .heading,
+  .description,
+  .benefitItem {
+    max-width: 100%;
+  }
+
+  .companyCard {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 20%;
+    height: 55%;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .section {
+    padding: 70px 20px 70px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 15.5px;
+  }
+
+  .benefitItem {
+    font-size: 15px;
+  }
+
+  .visual {
+    margin-top: 40px;
+    aspect-ratio: 4 / 5;
+  }
+
+  .companyCard {
+    left: 4%;
+    right: 4%;
+    top: 15%;
+    height: 70%;
+    padding: 16px 16px 14px;
+    border-radius: 14px;
+  }
+
+  .cardTitle {
+    font-size: 17px;
+  }
+
+  .tabs {
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .tab {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .detailsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .detailsCol {
+    gap: 10px;
+  }
+}

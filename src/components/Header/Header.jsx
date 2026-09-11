@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 const NAV_ITEMS = [
-  { label: "Platform", href: "#platform" },
+  { label: "Platform", href: "/platform" },
   { label: "Solutions", href: "#solutions" },
   { label: "Pricing", href: "#pricing" },
   { label: "Resources", href: "#resources" },
@@ -87,9 +88,9 @@ export default function Header() {
           <ul className={styles.navList}>
             {NAV_ITEMS.map((item) => (
               <li key={item.label}>
-                <a href={item.href} className={styles.navLink}>
+                <Link to={item.href} className={styles.navLink}>
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
