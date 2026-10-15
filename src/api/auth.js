@@ -16,12 +16,23 @@ export function register({ email, password, firstName, lastName }) {
 
 /** POST /accounts/login/ — returns AuthResponse { account, tokens }. */
 export async function login({ email, password }) {
-  const data = await request("/accounts/login/", {
+  const response = await request("/accounts/login/", {
     method: "POST",
     body: { email, password },
   });
-  if (data?.tokens) saveTokens(data.tokens);
-  if (data?.account) saveAccount(data.account);
+
+  const data = response?.data ?? response;
+
+  if (!data?.tokens?.access_token) {
+    throw new Error("Login succeeded, but no access token was returned.");
+  }
+
+  saveTokens(data.tokens);
+
+  if (data.account) {
+    saveAccount(data.account);
+  }
+
   return data;
 }
 

@@ -69,9 +69,21 @@ export default function SignInPage() {
     setStatus("loading");
 
     try {
+      console.log("Login started");
+
       await login({ email: trimmed, password });
+
+      console.log("Login successful");
+      console.log("Navigating to:", destination);
+
       navigate(destination, { replace: true });
     } catch (error) {
+      console.error("Login failed:", {
+        status: error.status,
+        code: error.code,
+        message: error.message,
+      });
+
       if (error.status === 401 || error.status === 400) {
         setStatus("invalid");
         setMessage(error.message || "Incorrect email or password.");
