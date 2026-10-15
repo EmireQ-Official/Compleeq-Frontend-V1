@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import AuthLayout from "../../../components/auth/AuthLayout/AuthLayout";
 import {
   AuthHeading,
@@ -25,14 +30,21 @@ export default function SignInPage() {
   const location = useLocation();
   const [searchParams] = useSearchParams();
   const verified = searchParams.get("verified") === "1";
-  const requestedPath = location.state?.from?.pathname;
-  const destination =
-    requestedPath && requestedPath !== "/login" ? requestedPath : "/on-boarding";
+
   const [status, setStatus] = useState("idle");
   const [email, setEmail] = useState(searchParams.get("email") || "");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [message, setMessage] = useState("");
+
+  const requestedPath = location.state?.from?.pathname;
+
+  const destination =
+    requestedPath &&
+    requestedPath !== "/login" &&
+    requestedPath !== "/on-boarding"
+      ? requestedPath
+      : "/dashboard";
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -140,7 +152,10 @@ export default function SignInPage() {
           </p>
         ) : null}
 
-        <PrimaryButton loading={status === "loading"} loadingLabel="Signing in…">
+        <PrimaryButton
+          loading={status === "loading"}
+          loadingLabel="Signing in…"
+        >
           {isServerError ? "Try again" : "Sign in"}
         </PrimaryButton>
 
