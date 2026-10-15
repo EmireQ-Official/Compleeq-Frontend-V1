@@ -1,37 +1,20 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
+import compleeqLogo from "../../assets/images/compleeq-auth-logo.svg";
 
 const NAV_ITEMS = [
   { label: "Platform", href: "/platform" },
-  { label: "Solutions", href: "#solutions" },
+  { label: "Solutions", href: "/solutions" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Resources", href: "#resources" },
+  { label: "Resources", href: "/resources" },
   { label: "Company", href: "#company" },
 ];
 
 function Logo() {
   return (
     <a href="/" className={styles.logo} aria-label="Compleeq home">
-      <svg
-        className={styles.logoIcon}
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <path
-          d="M21.2 8.6a9.6 9.6 0 1 0 0 14.8"
-          stroke="#1F4A43"
-          strokeWidth="4.4"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <circle cx="21.6" cy="16" r="3.3" fill="#8BC53F" />
-      </svg>
-      <span className={styles.logoText}>Compleeq</span>
+      <img src={compleeqLogo} alt="Compleeq" className={styles.logoImage} />
     </a>
   );
 }
@@ -97,9 +80,9 @@ export default function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <a href="/sign-in" className={styles.signIn}>
+          <Link to="/login" className={styles.signIn}>
             Sign In
-          </a>
+          </Link>
           <a href="/book-a-demo" className={styles.cta}>
             Book a Demo
             <span className={styles.ctaArrow} aria-hidden="true">
@@ -151,13 +134,13 @@ export default function Header() {
         </nav>
 
         <div className={styles.mobileActions}>
-          <a
-            href="/sign-in"
+          <Link
+            to="/login"
             className={styles.mobileSignIn}
             onClick={closeMenu}
           >
             Sign In
-          </a>
+          </Link>
           <a
             href="/book-a-demo"
             className={styles.mobileCta}

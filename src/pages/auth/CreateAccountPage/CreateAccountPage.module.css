@@ -1,0 +1,71 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Figma: the email input and its CTA share one rounded shell. */
+.inlineField {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 332px;
+  padding: 6px 6px 6px 14px;
+  border: 1px solid var(--auth-input-border);
+  border-radius: var(--auth-radius);
+  background: var(--auth-surface);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.inlineField:focus-within {
+  border-color: var(--auth-green);
+  box-shadow: 0 0 0 3px rgba(99, 138, 117, 0.15);
+}
+
+.inlineFieldError {
+  border-color: var(--auth-danger);
+}
+
+.inlineInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--auth-font-body);
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--auth-heading);
+}
+
+.inlineInput::placeholder {
+  color: var(--auth-muted);
+}
+
+.inlineButton {
+  flex: 0 0 auto;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: var(--auth-green);
+  font-family: var(--auth-font-body);
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 600;
+  color: var(--auth-on-dark);
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.inlineButton:hover {
+  background: var(--auth-green-hover);
+}
+
+.signInRow {
+  margin: 0;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--auth-body);
+}

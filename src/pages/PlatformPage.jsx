@@ -1,4 +1,3 @@
-import React from "react";
 import PlatformHero from "../components/PlatformHero/PlatformHero";
 import CompanyRecord from "../components/CompanyRecord/CompanyRecord";
 import BuiltToConnect from "../components/BuiltToConnect/BuiltToConnect";

@@ -1,0 +1,14 @@
+.statsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.chartContainer {
+  margin-bottom: 2rem;
+}
+
+.tableContainer {
+  margin-bottom: 2rem;
+}

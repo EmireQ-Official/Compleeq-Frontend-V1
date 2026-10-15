@@ -1,0 +1,125 @@
+.body {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 100vh;
+  background: var(--auth-surface);
+  font-family: var(--auth-font-body);
+}
+
+/* ---------- LEFT: white form column ---------- */
+
+.left {
+  box-sizing: border-box;
+  flex: 0 0 750px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: var(--auth-block-padding) var(--auth-side-padding);
+  background: var(--auth-surface);
+}
+
+.column {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--auth-column);
+  display: flex;
+  flex-direction: column;
+}
+
+.logoLink {
+  display: block;
+  flex: 0 0 auto;
+  width: 152px;
+  line-height: 0;
+}
+
+.logo {
+  display: block;
+  width: 152px;
+  height: 52px;
+}
+
+/* Vertically centres the form between the logo and the legal footer,
+   matching the Figma auto-layout where the middle frame absorbs the space. */
+.content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.footer {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legal {
+  margin: 0;
+  font-size: 11px;
+  line-height: 15.4px;
+  font-weight: 400;
+  color: var(--auth-muted);
+}
+
+.legalLink {
+  color: var(--auth-muted);
+  text-decoration: underline;
+}
+
+.legalLink:hover {
+  color: var(--auth-body);
+}
+
+@media (max-width: 1200px) {
+  .left {
+    flex: 1 1 50%;
+    justify-content: center;
+    padding: 40px 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .left {
+    flex-basis: 100%;
+    padding: 48px;
+  }
+
+  .body > :last-child:not(.left) {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .left {
+    align-items: center;
+    padding: 32px 20px;
+  }
+
+  .logoLink,
+  .logo {
+    width: 132px;
+  }
+
+  .logo {
+    height: auto;
+  }
+
+  .content {
+    gap: 16px;
+    padding: 28px 0;
+  }
+
+  .footer {
+    width: 100%;
+  }
+
+  .legal {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}

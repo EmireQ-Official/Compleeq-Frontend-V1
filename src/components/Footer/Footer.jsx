@@ -49,7 +49,7 @@ const LEGAL_LINKS = [
   { label: "Security Overview", href: "#" },
 ];
 
-export default function Footer() {
+export default function Footer({ resourcesPage = false }) {
   return (
     <footer className={styles.footer}>
       <img
@@ -60,24 +60,15 @@ export default function Footer() {
       />
 
       <div className={styles.inner}>
-        <div className={styles.ctaCard}>
+        <div className={`${styles.ctaCard} ${resourcesPage ? styles.resourceCtaCard : ""}`}>
           <div className={styles.eyebrow}>
             <span className={styles.eyebrowLine} aria-hidden="true" />
-            <span className={styles.eyebrowText}>Complete Compliance</span>
+            <span className={styles.eyebrowText}>{resourcesPage ? "Keep Learning" : "Complete Compliance"}</span>
           </div>
 
-          <h2 className={styles.heading}>
-            <span className={styles.headingLine}>
-              Know what applies. Know what changed.
-            </span>
-            <span className={styles.headingLine}>Know what to do next.</span>
-          </h2>
+          <h2 className={styles.heading}>{resourcesPage ? <><span className={styles.headingLine}>Built around the way your</span><span className={styles.headingLine}>organization works</span></> : <><span className={styles.headingLine}>Know what applies. Know what changed.</span><span className={styles.headingLine}>Know what to do next.</span></>}</h2>
 
-          <p className={styles.description}>
-            One continuously updated compliance picture across identity,
-            <br className={styles.lineBreak} />
-            ownership, risk, obligations, documents and workflows.
-          </p>
+          <p className={styles.description}>{resourcesPage ? <>Choose a solution that matches your compliance structure today<br className={styles.lineBreak} /> and can scale with you as complexity grows.</> : <>One continuously updated compliance picture across identity,<br className={styles.lineBreak} />ownership, risk, obligations, documents and workflows.</>}</p>
 
           <div className={styles.actions}>
             <a href="/book-a-demo" className={styles.primaryButton}>
@@ -87,7 +78,7 @@ export default function Footer() {
               </span>
             </a>
             <a href="/platform" className={styles.secondaryButton}>
-              Explore the Platform
+              {resourcesPage ? "Talk to our Team" : "Explore the Platform"}
             </a>
           </div>
         </div>

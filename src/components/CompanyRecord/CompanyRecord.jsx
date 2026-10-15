@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./CompanyRecord.module.css";
 import companyBackground from "../../assets/images/companyBackground.png";
 

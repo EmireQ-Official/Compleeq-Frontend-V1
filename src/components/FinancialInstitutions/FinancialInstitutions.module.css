@@ -1,0 +1,375 @@
+.section {
+  width: 100%;
+  background-color: #f8f7f1;
+  padding: 110px 24px 110px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 620px 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ================= LEFT VISUAL ================= */
+
+.visual {
+  position: relative;
+  width: 100%;
+  height: 533px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ============= ONBOARDING CARD (overlay) ============= */
+
+.onboardingCard {
+  position: absolute;
+  left: 48px;
+  right: 48px;
+  top: 62px;
+  bottom: 62px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+  padding: 26px 28px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #102027;
+}
+
+.approvedBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 12px;
+  background-color: #ffffff;
+  border: 1px solid #d9dcd6;
+  color: #45524a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.entityBox {
+  background-color: #f2f1ea;
+  border-radius: 10px;
+  padding: 16px 18px 18px;
+  margin-bottom: 22px;
+}
+
+.entityName {
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #102027;
+}
+
+.tagsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tagsRow:last-child {
+  margin-bottom: 0;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background-color: #ffffff;
+  border: 1px solid #e4e2d8;
+  border-radius: 7px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #33403a;
+  white-space: nowrap;
+}
+
+.monitoringLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #8b9a8f;
+  margin-bottom: 12px;
+}
+
+.monitoringList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.monitoringRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background-color: #ffffff;
+  border: 1px solid #ecece4;
+  border-radius: 8px;
+}
+
+.monitoringName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #17241f;
+}
+
+.liveStatus {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #33403a;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2f8f6f;
+  flex-shrink: 0;
+}
+
+/* ================= RIGHT CONTENT ================= */
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.eyebrowLine {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #6f9488;
+  border-radius: 1px;
+}
+
+.eyebrowText {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #6f9488;
+  line-height: 1;
+}
+
+.heading {
+  margin: 0 0 22px 0;
+  padding: 0;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  color: #285a53;
+  max-width: 560px;
+}
+
+.headingLine {
+  display: block;
+}
+
+.description {
+  margin: 0 0 34px 0;
+  max-width: 520px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #5e706d;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 36px;
+}
+
+.featureItem {
+  max-width: 520px;
+}
+
+.featureTitle {
+  margin: 0 0 6px 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #285a53;
+}
+
+.featureText {
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5e706d;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  height: 50px;
+  padding: 0 24px;
+  background-color: #17352f;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 200ms ease;
+}
+
+.ctaButton:hover {
+  background-color: #102520;
+}
+
+.arrow {
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+  .container {
+    grid-template-columns: 480px 1fr;
+    gap: 50px;
+  }
+
+  .heading {
+    font-size: 34px;
+  }
+
+  .visual {
+    height: 420px;
+  }
+
+  .onboardingCard {
+    left: 32px;
+    right: 32px;
+    top: 40px;
+    bottom: 40px;
+    padding: 20px 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    max-width: 620px;
+    margin: 0 auto;
+    height: auto;
+    aspect-ratio: 620 / 533;
+  }
+
+  .content {
+    max-width: 620px;
+    margin: 50px auto 0;
+  }
+
+  .heading,
+  .description,
+  .featureItem {
+    max-width: 100%;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .section {
+    padding: 70px 20px 70px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 15.5px;
+  }
+
+  .onboardingCard {
+    left: 16px;
+    right: 16px;
+    top: 24px;
+    bottom: 24px;
+    padding: 16px 16px;
+  }
+
+  .cardTitle {
+    font-size: 15px;
+  }
+
+  .entityBox {
+    padding: 14px 14px 16px;
+  }
+
+  .monitoringRow {
+    padding: 10px 12px;
+  }
+
+  .monitoringName {
+    font-size: 13px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+    height: auto;
+    padding: 14px 20px;
+  }
+}

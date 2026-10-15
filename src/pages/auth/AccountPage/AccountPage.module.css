@@ -1,0 +1,7 @@
+.card { box-sizing:border-box; width:640px; min-height:190px; padding:32px; border:1px solid #d8dfdd; border-radius:16px; background:#fff; box-shadow:0 2px 5px rgba(8,24,28,.03); }
+.card>span { color:#7d868e; font-size:11px; font-weight:700; letter-spacing:.1em; }
+.card h2 { margin:7px 0 5px; color:#08181c; font-size:20px; line-height:24px; }
+.card p { margin:0; color:#5c5c5c; font-size:14px; line-height:20px; }
+.card button { height:38px; margin-top:24px; padding:0 24px; border:0; border-radius:9px; background:#e6001b; color:#fff; font:500 14px Inter,system-ui,sans-serif; cursor:pointer; }
+.card button:hover { background:#c90018; }
+@media(max-width:760px){.card{width:100%}}

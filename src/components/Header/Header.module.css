@@ -36,6 +36,12 @@
   flex-shrink: 0;
 }
 
+.logoImage {
+  display: block;
+  width: 152px;
+  height: 53px;
+}
+
 .logoIcon {
   width: 32px;
   height: 32px;

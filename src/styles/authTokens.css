@@ -1,0 +1,43 @@
+/* Design tokens measured from Figma — Compleeq / Authentication Pages (node 189-2249) */
+
+:root {
+  /* Surfaces */
+  --auth-surface: #ffffff;
+  --auth-panel-bg: #08181c;
+  --auth-card: #163737;
+  --auth-card-alt: #0f2424;
+  --auth-card-inner: #08181c;
+  --auth-border: #2a534c;
+  --auth-input-border: #e2e4e5;
+
+  /* Brand */
+  --auth-green: #638a75;
+  --auth-green-hover: #567a67;
+  --auth-green-pressed: #4c6d5b;
+  --auth-cream: #f9f0da;
+
+  /* Text */
+  --auth-heading: #08181c;
+  --auth-body: #525252;
+  --auth-muted: #8b9495;
+  --auth-on-dark: #ffffff;
+  --auth-on-dark-muted: #b3c1b4;
+
+  /* Feedback */
+  --auth-success: #2f7d5b;
+  --auth-success-bg: #eef6f1;
+  --auth-danger: #b3261e;
+  --auth-danger-bg: #fdf0ef;
+
+  /* Type */
+  --auth-font-display: "Bricolage Grotesque", "Inter", system-ui, sans-serif;
+  --auth-font-body: "Inter", system-ui, sans-serif;
+
+  /* Metrics */
+  --auth-column: 480px;
+  --auth-side-padding: 86px;
+  --auth-block-padding: 48px;
+  --auth-radius: 8px;
+  --auth-input-height: 42px;
+  --auth-button-height: 45px;
+}

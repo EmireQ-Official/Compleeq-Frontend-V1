@@ -1,0 +1,309 @@
+/* ---------- Heading group (Figma gap 16) ---------- */
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  line-height: 14.52px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--auth-green);
+}
+
+.eyebrowRule {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--auth-green);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--auth-font-display);
+  font-size: 36px;
+  line-height: 41px;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--auth-heading);
+}
+
+.description {
+  margin: 0;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--auth-body);
+}
+
+/* ---------- Fields (Figma gap 8, input 42px / radius 8) ---------- */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 13px;
+  line-height: 15.73px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--auth-heading);
+}
+
+.inputShell {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: var(--auth-input-height);
+  padding: 12px 14px;
+  border: 1px solid var(--auth-input-border);
+  border-radius: var(--auth-radius);
+  background: var(--auth-surface);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.inputShell:focus-within {
+  border-color: var(--auth-green);
+  box-shadow: 0 0 0 3px rgba(99, 138, 117, 0.15);
+}
+
+.inputError {
+  border-color: var(--auth-danger);
+}
+
+.inputError:focus-within {
+  border-color: var(--auth-danger);
+  box-shadow: 0 0 0 3px rgba(179, 38, 30, 0.12);
+}
+
+.input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--auth-font-body);
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--auth-heading);
+}
+
+.input::placeholder {
+  color: var(--auth-muted);
+}
+
+.fieldError {
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--auth-danger);
+}
+
+.eyeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--auth-muted);
+  cursor: pointer;
+}
+
+.eyeButton:hover {
+  color: var(--auth-body);
+}
+
+/* ---------- Password hints (Figma gap 16, dot 5px, inner gap 6) ---------- */
+
+.hints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--auth-body);
+}
+
+.hintDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--auth-green);
+}
+
+/* ---------- Primary action (Figma 45px / radius 8) ---------- */
+
+.primaryButton {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--auth-button-height);
+  padding: 14px 24px;
+  border: none;
+  border-radius: var(--auth-radius);
+  background: var(--auth-green);
+  font-family: var(--auth-font-body);
+  font-size: 14px;
+  line-height: 16.94px;
+  font-weight: 600;
+  color: var(--auth-on-dark);
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: var(--auth-green-hover);
+}
+
+.primaryButton:active:not(:disabled) {
+  background: var(--auth-green-pressed);
+}
+
+.primaryButton:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.primaryButton.secondaryButton {
+  border: 1px solid var(--auth-input-border);
+  background: transparent;
+  color: var(--auth-heading);
+}
+
+.primaryButton.secondaryButton:hover:not(:disabled) {
+  background: rgba(16, 24, 40, 0.04);
+}
+
+.primaryButton.dangerButton {
+  background: var(--auth-danger);
+  color: var(--auth-on-dark);
+}
+
+.primaryButton.dangerButton:hover:not(:disabled) {
+  background: #98241d;
+}
+
+/* ---------- Secondary link ---------- */
+
+.secondary {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--auth-body);
+}
+
+.secondaryAction {
+  font-weight: 600;
+  color: var(--auth-green);
+  text-decoration: none;
+}
+
+.secondaryAction:hover {
+  text-decoration: underline;
+}
+
+.secondaryPlain {
+  font-weight: 400;
+  color: var(--auth-body);
+  text-decoration: none;
+}
+
+.secondaryPlain:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Inline feedback ---------- */
+
+.message {
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: var(--auth-radius);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.messageMark {
+  flex: 0 0 auto;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.messageSuccess {
+  background: var(--auth-success-bg);
+  color: var(--auth-success);
+}
+
+.messageError {
+  background: var(--auth-danger-bg);
+  color: var(--auth-danger);
+}
+
+/* ---------- Masked email chip ---------- */
+
+.emailChip {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: var(--auth-input-height);
+  padding: 10px 14px;
+  border: 1px solid var(--auth-input-border);
+  border-radius: var(--auth-radius);
+  background: var(--auth-surface);
+}
+
+.emailChipLeft {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: var(--auth-body);
+}
+
+.emailText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: var(--auth-border);
+}
+
+.badge {
+  flex: 0 0 auto;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #eef2ef;
+  font-size: 11px;
+  line-height: 13.31px;
+  font-weight: 600;
+  color: var(--auth-green);
+}

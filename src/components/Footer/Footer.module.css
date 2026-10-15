@@ -41,6 +41,25 @@
   box-shadow: 0 16px 48px rgba(16, 24, 40, 0.08);
 }
 
+.resourceCtaCard {
+  min-height: 499px;
+  padding: 80px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.resourceCtaCard .heading {
+  font-size: 56px;
+  line-height: 60px;
+}
+
+.resourceCtaCard .description {
+  font-size: 18px;
+  line-height: 28px;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;

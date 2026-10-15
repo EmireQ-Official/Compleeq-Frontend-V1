@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Geist:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap");
+
+.page { background:#fbfaf5; color:#08181c; font-family:Inter, sans-serif; }
+.page *, .page *::before, .page *::after { box-sizing:border-box; }
+.hero { height:779px; background:#fbfaf5; }
+.heroInner { width:1200px; height:539px; margin:0 auto; padding-top:120px; display:grid; grid-template-columns:634px 502px; gap:64px; }
+.heroCopy { height:538px; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; }
+.eyebrow { display:flex; align-items:center; gap:12px; color:#638a75; font:700 12px/14.5px Inter,sans-serif; letter-spacing:.08em; }
+.eyebrow::before { content:""; width:24px; height:1.5px; background:currentColor; }
+.hero h1 { margin:38px 0 28px; font:700 76px/1.1 "Bricolage Grotesque",sans-serif; letter-spacing:-.04em; color:#446e60; }
+.heroCopy>p { width:610px; margin:0; color:#516660; font:400 16px/24px Inter,sans-serif; }
+.primaryButton { display:inline-flex; align-items:center; gap:14px; height:46px; margin-top:48px; padding:0 24px; border-radius:7px; background:#2a534b; color:#fff; text-decoration:none; font:600 14px/17px Inter,sans-serif; }
+.heroArtwork { position:relative; width:502px; height:539px; overflow:hidden; border-radius:10px; }
+.heroArtwork>img, .guideVisual>img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.featuredGuide { position:absolute; left:42px; top:78px; width:418px; height:383px; overflow:hidden; border-radius:16px; background:#fff; box-shadow:0 12px 24px rgba(9,24,29,.12); }
+.guideHeader { height:111px; padding:52px 70px; background:#eef4f1; }
+.guideHeader i { display:block; height:7px; border-radius:4px; background:#d9e5df; }
+.guideHeader i:first-child { width:75%; margin-bottom:14px; }
+.guideHeader i:last-child { width:100%; }
+.guideBody { padding:25px 28px; }
+.guideBody>span { color:#2a534c; font:700 9.67px/11.7px Inter,sans-serif; }
+.guideBody h2 { width:330px; margin:13px 0 14px; color:#08181c; font:700 22.56px/27.07px "Bricolage Grotesque",sans-serif; }
+.guideBody p { margin:0; color:#4a5a5c; font:400 11.28px/16.92px Inter,sans-serif; }
+.guideBody small { display:block; margin-top:24px; color:#768688; font:400 10.48px/12.68px Inter,sans-serif; }
+
+.guides { height:991px; padding-top:120px; background:#fbfaf5; }
+.sectionHeader { width:1200px; margin:0 auto; text-align:center; }
+.sectionHeader .eyebrow { justify-content:center; }
+.sectionHeader h2 { width:880px; margin:17px auto 16px; color:#446e60; font:700 62px/64px "Bricolage Grotesque",sans-serif; letter-spacing:-.035em; }
+.sectionHeader>p { margin:0; color:#434343; font:400 18px/28px Inter,sans-serif; }
+.guideGrid { width:1200px; margin:64px auto 0; display:grid; grid-template-columns:repeat(3,384px); gap:24px; }
+.guideCard { margin:0; }
+.guideVisual { position:relative; width:384px; height:365px; overflow:hidden; border-radius:10px; }
+.checklistPreview,.riskPreview,.monitoringPreview { position:absolute; left:42px; top:126px; width:300px; padding:18px 20px; border-radius:7px; background:#fff; box-shadow:0 10px 24px rgba(9,24,29,.08); }
+.checklistPreview>div,.monitoringPreview>div { display:flex; align-items:center; gap:8px; height:27px; color:#08181c; font:400 12px/14.5px Inter,sans-serif; }
+.checklistPreview i,.monitoringPreview i { width:8px; height:8px; border-radius:2px; background:#638a75; }
+.mutedRow { color:#768688!important; }
+.mutedRow i { background:#d8dfda!important; }
+.riskPreview { top:110px; padding:14px 17px; }
+.riskPreview>div { margin-bottom:13px; color:#4a5a5c; font:400 11px/13.3px Inter,sans-serif; }
+.riskPreview>div:last-child { margin-bottom:0; }
+.riskPreview i { display:block; width:100%; height:5px; margin-top:7px; overflow:hidden; border-radius:3px; background:#edf1ee; }
+.riskPreview b { display:block; height:100%; background:#638a75; }
+.monitoringPreview { top:104px; }
+.guideCard h3 { margin:20px 0 8px; color:#2a534b; font:600 22px/26.4px "Bricolage Grotesque",sans-serif; }
+.guideCard>p { width:384px; margin:0; color:#434343; font:400 14px/16.94px Inter,sans-serif; }
+
+.insights { height:1069px; padding-top:120px; background-size:cover; background-position:center; }
+.insights .sectionHeader h2 { width:880px; }
+.insights .sectionHeader>p { color:#5c5c54; }
+.insightsBody { width:1200px; height:564px; margin:64px auto 0; display:grid; grid-template-columns:680px 472px; gap:48px; }
+.featuredArticle { height:564px; padding:32px; border-radius:11px; background:#fff; box-shadow:0 8px 22px rgba(8,24,28,.06); }
+.articleIllustration { height:260px; display:flex; align-items:center; justify-content:center; gap:12px; border-radius:5px; background:#eaf1ee; }
+.articleIllustration i { width:29px; height:78px; border-radius:15px; background:#78a792; }
+.articleIllustration i:nth-child(2) { height:112px; background:#5e927e; }
+.articleIllustration i:nth-child(3) { align-self:center; transform:translateY(-16px); background:#2c6a5e; }
+.articleCopy { padding-top:24px; }
+.articleCopy>span,.articleList span { color:#2a534c; font:700 12px/14.5px Inter,sans-serif; }
+.articleCopy h3 { margin:12px 0 11px; color:#08181c; font:700 28px/33.6px "Bricolage Grotesque",sans-serif; }
+.articleCopy p { margin:0; color:#4a5a5c; font:400 15px/22.5px Inter,sans-serif; }
+.articleCopy small { display:block; margin-top:18px; color:#768688; font:400 13px/15.7px Inter,sans-serif; }
+.articleList { display:flex; flex-direction:column; }
+.articleList article { min-height:120px; padding:0 0 23px; margin-bottom:24px; border-bottom:1px solid rgba(42,83,75,.25); }
+.articleList span { color:#88a590; font-size:11px; line-height:13.3px; }
+.articleList h3 { margin:10px 0 8px; color:#08181c; font:700 20px/24px "Bricolage Grotesque",sans-serif; }
+.articleList small { color:#768688; font:400 12px/14.5px Inter,sans-serif; }
+
+.trust { height:848px; padding-top:120px; background:#103f3b; color:#fff; }
+.trustHeader { width:1200px; margin:0 auto; text-align:center; }
+.trustHeader .eyebrow { justify-content:center; color:#b3c1b4; }
+.trustHeader h2 { margin:16px auto 13px; color:#fff; font:600 56px/60px "Bricolage Grotesque",sans-serif; letter-spacing:-.025em; }
+.trustHeader p { margin:0; color:#f2f2f2; font:400 18px/28px Inter,sans-serif; }
+.trustGrid { width:1200px; height:311px; margin:64px auto 0; display:grid; grid-template-columns:323px 380px 323px; gap:87px; align-items:center; }
+.trustCopy h3 { margin:0 0 16px; color:#fff; font:600 28px/33.6px "Bricolage Grotesque",sans-serif; }
+.trustCopy p { margin:0 0 16px; color:#f2f2f2; font:400 14px/23px Inter,sans-serif; }
+.trustCopy>span { display:inline-block; min-height:40px; padding:12px 14px; border-radius:5px; background:#35665c; color:#fff; font:600 12px/15.6px Geist,Inter,sans-serif; }
+.caseCard { width:380px; height:311px; padding:32px; border:2px dashed #91b278; border-radius:10px; background:#fbfaf5; color:#08181c; box-shadow:0 12px 28px rgba(0,0,0,.2); }
+.caseTop { display:flex; align-items:center; justify-content:space-between; }
+.caseTop b,.caseCard>b { color:#638a75; font:700 11px/14.3px Geist,sans-serif; }
+.caseTop em { padding:4px 8px; border-radius:3px; background:#fff1c7; color:#d97706; font:700 10px/13px Geist,sans-serif; font-style:normal; }
+.caseCard h3 { margin:20px 0 4px; font:600 20px/24px "Bricolage Grotesque",sans-serif; }
+.caseCard>p { margin:0; color:#5c5c54; font:400 12px/15.6px Geist,sans-serif; }
+.caseCard hr { margin:18px 0; border:0; border-top:1px solid #d7ded8; }
+.caseCard ul { margin:10px 0 18px; padding:0; list-style:none; color:#2a534b; font:400 11px/14.3px Geist,sans-serif; }
+.pipeline { height:32px; display:grid; grid-template-columns:repeat(4,1fr); border-radius:4px; overflow:hidden; }
+.pipeline span { display:grid; place-items:center; background:#2a534b; color:#fff; font:600 10px/13px Geist,sans-serif; }
+.pipeline span:nth-child(n+3) { background:#eef2ea; color:#2a534b; }
+
+@media (max-width:900px){
+  .hero,.guides,.insights,.trust{height:auto;padding:72px 24px;}
+  .heroInner,.sectionHeader,.guideGrid,.insightsBody,.trustHeader,.trustGrid{width:100%;height:auto;margin:0;}
+  .heroInner{padding:0;grid-template-columns:1fr;gap:48px}.heroCopy{height:auto}.heroCopy>p{width:auto}.heroArtwork{width:min(502px,100%);margin:auto}
+  .hero h1{font-size:54px}.sectionHeader h2,.insights .sectionHeader h2{width:auto;font-size:44px;line-height:48px}
+  .guideGrid{margin-top:52px;grid-template-columns:1fr}.guideCard{max-width:384px;margin:auto}.insightsBody{margin-top:52px;grid-template-columns:1fr}.featuredArticle{height:auto}.trustGrid{margin-top:52px;grid-template-columns:1fr;gap:36px}.caseCard{width:min(380px,100%);margin:auto}.trustHeader h2{font-size:42px;line-height:46px}.trustHeader br{display:none}
+}
+@media (max-width:520px){.hero h1{font-size:43px}.heroArtwork{height:420px}.featuredGuide{left:7%;top:54px;width:86%;height:312px}.guideHeader{height:90px;padding:38px 48px}.guideBody{padding:18px 22px}.guideBody h2{width:auto;font-size:19px;line-height:22px}.guideVisual,.guideCard>p{width:100%}.guideGrid{display:block}.guideCard{margin-bottom:44px}.articleIllustration{height:210px}.featuredArticle{padding:20px}.trustHeader h2{font-size:36px;line-height:40px}}
